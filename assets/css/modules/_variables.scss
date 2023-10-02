@@ -3,8 +3,9 @@
 // --------------------------------------------
 $color-white: #fff;
 $color-shadow: #f1f3f5;
-$colorMain: #333;
 
+$colorMain: #333;
+$colorSub: #ececec;
 
 // --------------------------------------------
 // 幅
@@ -27,3 +28,4 @@ $heightHeaderPc: 100px;
 // --------------------------------------------
 $backgroundHeaderSp: rgba(255, 255, 255, 0.3);
 $backgroundHeaderPc: $color-white;
+$backgroundFooter: $colorSub;
