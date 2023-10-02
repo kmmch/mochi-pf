@@ -1,19 +1,36 @@
 @use "modules/variables" as *;
 @use "modules/mixin" as *;
 
+// --------------------------------------------------
+// 共通
+// --------------------------------------------------
 * {
     font-family: 'Noto Sans JP', sans-serif;
     color: $colorMain;
 }
-// --------------------------------------------------
-// 共通
-// --------------------------------------------------
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
 .wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: $maxWidthSp;
     @include pc {
         max-width: $maxWidthPc;
+    }
+}
+
+.section {
+    padding: 10% 0;
+    &__ttl,
+    &__description {
+        text-align: center;
+    }
+
+    &__ttl {
     }
 }
 
@@ -137,7 +154,7 @@
             height: 3px;
             border-radius: 2px;
             background-color: $colorMain;
-            width: 45%;
+            width: 50%;
 
             &:nth-of-type(1) {
                 top: 15px; 
@@ -154,18 +171,14 @@
             & span {
                 &:nth-of-type(1) {
                     top: 18px;
-                    left: 18px;
                     transform: translateY(6px) rotate(-45deg);
-                    width: 30%;
                 }
                 &:nth-of-type(2) {
                     opacity: 0;
                 }
                 &:nth-of-type(3) {
                     top: 30px;
-                    left: 18px;
                     transform: translateY(-6px) rotate(45deg);
-                    width: 30%;
                 }
             }
         }
@@ -174,9 +187,9 @@
 
 
 main {
-    padding: $heightHeaderSp 10px;
+    padding: $heightHeaderSp + 10px 0;
     @include pc {
-        padding-top: $heightHeaderPc + 50px;
+        padding: $heightHeaderPc + 50px 0;
     }
 }
 
@@ -192,6 +205,48 @@ main {
     }
 }
 
+
+
+// --------------------------------------------------
+// プロフィール
+// --------------------------------------------------
+.profile {
+    &__img {
+        text-align: center;
+
+        & > img {
+            width: 256px;
+            height: 256px;
+        }
+    }
+
+    &__name {
+        text-align: center;
+    }
+}
+
+.serviceList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    &__item {
+        &--link {
+            display: inline-block;
+            height: 100%;
+
+            & i.fa-brands {
+                height: 100%;
+                font-size: calc($baseWidthServiceIcon * 1.145) * 1rem;
+            }
+
+            &.qiiita > svg {
+                width: calc($baseWidthServiceIcon * 1) * 1rem;
+            }
+        }
+    }
+}
 
 
 // --------------------------------------------------
