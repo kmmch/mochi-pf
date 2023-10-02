@@ -1,0 +1,195 @@
+@use "modules/variables" as *;
+@use "modules/mixin" as *;
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: $colorMain;
+}
+// --------------------------------------------------
+// 共通
+// --------------------------------------------------
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $maxWidthSp;
+    @include pc {
+        max-width: $maxWidthPc;
+    }
+}
+
+.is-pc {
+    display: none;
+    @include pc {
+        display: block;
+    }
+}
+
+.is-sp {
+    @include pc {
+        display: none;
+    }
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+
+
+// --------------------------------------------------
+// ヘッダー
+// --------------------------------------------------
+.header {
+    position: fixed;
+    width: 100%;
+    background: $backgroundHeaderSp;
+    height: $heightHeaderSp;
+
+    @include pc {
+        background-color: $backgroundHeaderPc;
+        box-shadow: $color-shadow 0 0 4px 4px;    
+        height: $heightHeaderPc;
+    }
+
+    & .wrapper {
+        height: 100%;
+        @include pc {
+            max-width: $minWidthPc;
+        }
+    }
+
+    &Menu {
+        height: 100%;
+        @include pc {
+            max-width: $minWidthPc;
+            margin: 0 auto;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+    }
+}
+
+.hamburger {
+    &Menu {
+        /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+        position:fixed;
+        z-index: 999;
+        /*ナビの位置と形状*/
+        top:0;
+        right: -120%;
+        width:100%;
+        height: 100vh;/*ナビの高さ*/
+        /*背景を少し透過させる*/
+        // background:#999;
+        background: rgba(255, 255, 255, 0.9);
+        /*動き*/
+        transition: all 0.6s;
+
+        &.active {
+            right: 0;
+            
+            & .hamburgerMenu__list {
+            }
+        }
+
+        &__list {
+            /*ナビゲーション天地中央揃え*/
+            position: absolute;
+            z-index: 999;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+
+            &--item {
+                list-style: none;
+                text-align: center; 
+
+                & a {
+                    text-decoration: none;
+                    padding:10px;
+                    display: block;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+
+    &Btn {
+        position:fixed;
+        z-index: 9999;/*ボタンを最前面に*/
+        top:10px;
+        right: 10px;
+        cursor: pointer;
+        width: 50px;
+        height:50px;
+        
+        & span {
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            left: 14px;
+            height: 3px;
+            border-radius: 2px;
+            background-color: $colorMain;
+            width: 45%;
+
+            &:nth-of-type(1) {
+                top: 15px; 
+            }
+            &:nth-of-type(2) {
+                top: 23px;
+            }
+            &:nth-of-type(3) {
+                top: 31px;
+            }
+        }
+
+        &.active {
+            & span {
+                &:nth-of-type(1) {
+                    top: 18px;
+                    left: 18px;
+                    transform: translateY(6px) rotate(-45deg);
+                    width: 30%;
+                }
+                &:nth-of-type(2) {
+                    opacity: 0;
+                }
+                &:nth-of-type(3) {
+                    top: 30px;
+                    left: 18px;
+                    transform: translateY(-6px) rotate(45deg);
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+
+main {
+    padding: $heightHeaderSp 10px;
+    @include pc {
+        padding-top: $heightHeaderPc + 50px;
+    }
+}
+
+.box {
+    background-color: aqua;
+    height: 150vh;
+}
+
+#test {
+    & .box {
+        background-color: darkcyan;
+        height: 50vh;
+    }
+}
