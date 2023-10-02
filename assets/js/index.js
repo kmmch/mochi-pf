@@ -5,6 +5,7 @@
         $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
         $('.hamburgerMenu').toggleClass('active');//ナビゲーションにactiveクラスを付与
         $('body').toggleClass('noScroll');
+        $('.footer').toggleClass('activeHamburger');
     });
     
     // ハンバーガーメニューのリンククリック時
@@ -12,6 +13,7 @@
         $('.hamburgerBtn').removeClass('active');//ボタンの activeクラスを除去し
         $('.hamburgerMenu').removeClass('active');//ナビゲーションのactiveクラスを除去
         $('body').removeClass('noScroll');
+        $('.footer').removeClass('activeHamburger');
     });
 
     $('.arrowUpper').click(function() {

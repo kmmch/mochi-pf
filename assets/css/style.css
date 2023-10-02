@@ -176,6 +176,9 @@ main {
   background: #ececec;
   position: relative;
 }
+.footer.activeHamburger {
+  z-index: -1;
+}
 
 .scrollTop {
   position: absolute;

@@ -93,9 +93,6 @@
 
         &.active {
             right: 0;
-            
-            & .hamburgerMenu__list {
-            }
         }
 
         &__list {
@@ -204,6 +201,10 @@ main {
     padding: 30px 0;
     background: $backgroundFooter;
     position: relative;
+
+    &.activeHamburger {
+        z-index: -1;
+    }
 }
 
 .scrollTop {
@@ -239,10 +240,6 @@ main {
             left: 40%;
             transform: rotate(-45deg);
         }
-
-        // &:hover {
-            // background: black;
-        // }
     }
 }
 
