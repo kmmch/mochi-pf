@@ -6,6 +6,14 @@ $color-shadow: #f1f3f5;
 
 $colorMain: #333;
 $colorSub: #ececec;
+$colorThird: #999;
+
+
+// --------------------------------------------
+// 背景
+// --------------------------------------------
+$fontWeightSectionTtl: 700;
+
 
 // --------------------------------------------
 // 幅
@@ -21,12 +29,13 @@ $baseWidthServiceIcon: 2;
 // 高さ
 // --------------------------------------------
 $heightHeaderSp: 60px;
-$heightHeaderPc: 100px;
+$heightHeaderPc: 60px;
 
 
 // --------------------------------------------
 // 背景
 // --------------------------------------------
 $backgroundHeaderSp: rgba(255, 255, 255, 0.3);
-$backgroundHeaderPc: $color-white;
+// $backgroundHeaderPc: $color-white;
+$backgroundHeaderPc: rgba(255, 255, 255, 0.5);
 $backgroundFooter: $colorSub;
