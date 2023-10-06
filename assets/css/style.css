@@ -13,7 +13,7 @@ a.underline:after {
   left: -10%;
   content: "";
   width: 0;
-  height: 1.5px;
+  height: 1px;
   background-color: #333;
   transition: 0.3s;
 }
@@ -314,16 +314,6 @@ main {
   main {
     padding: 110px 0;
   }
-}
-
-.box {
-  background-color: aqua;
-  height: 150vh;
-}
-
-#test .box {
-  background-color: darkcyan;
-  height: 50vh;
 }
 
 .fv {

@@ -18,7 +18,7 @@ a.underline {
         left: -10%;
         content: '';
         width: 0;
-        height: 1.5px;
+        height: 1px;
         background-color: $colorMain;
         transition: .3s;
     }
@@ -301,18 +301,6 @@ main {
     padding: $heightHeaderSp + 10px 0;
     @include pc {
         padding: $heightHeaderPc + 50px 0;
-    }
-}
-
-.box {
-    background-color: aqua;
-    height: 150vh;
-}
-
-#test {
-    & .box {
-        background-color: darkcyan;
-        height: 50vh;
     }
 }
 
