@@ -68,7 +68,7 @@ img {
 }
 @media screen and (min-width: 840px) {
   .wrapper {
-    max-width: 80%;
+    max-width: 960px;
   }
 }
 
@@ -149,7 +149,7 @@ img {
   /*font-size: 30px; フォントサイズ 自由に設定化 */
 }
 .star5_rating:before, .star5_rating:after {
-  content: "★★★★★";
+  content: "★★★";
 }
 .star5_rating:after {
   position: absolute;
@@ -158,7 +158,7 @@ img {
   left: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: #ffcf32; /* イエローカラー 自由に設定化 */
+  color: #ffc532; /* イエローカラー 自由に設定化 */
 }
 
 .star5_rating[data-rate="5"]:after {
@@ -309,6 +309,7 @@ img {
 
 main {
   padding: 70px 0;
+  background-color: #f8f9fa;
 }
 @media screen and (min-width: 840px) {
   main {
@@ -320,11 +321,17 @@ main {
   height: 100vh;
   display: grid;
   place-items: center;
+  background-color: #f8f9fa;
 }
 @media screen and (min-width: 840px) {
   .fv {
     height: 100vh;
   }
+}
+.fv h1 {
+  font-size: 36px; /*IE9以前に対応する*/
+  font-size: 2.25rem;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -335,10 +342,6 @@ main {
   .container {
     padding-bottom: 0px;
   }
-}
-.container h1 {
-  font-size: 32px; /*IE9以前に対応する*/
-  font-size: 2rem;
 }
 
 /*スクロールダウン全体の場所*/
@@ -402,6 +405,7 @@ main {
   .profile {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }
 .profile__img {
@@ -418,7 +422,8 @@ main {
 }
 @media screen and (min-width: 840px) {
   .profile__img > img {
-    width: 384px;
+    width: 256px;
+    height: 256px;
   }
 }
 .profile__text {
@@ -469,6 +474,67 @@ main {
 }
 .serviceList__item--link.qiiita > svg {
   width: 2rem;
+}
+
+.rating {
+  margin: 0 auto;
+  width: 57.5%;
+}
+
+.skillList {
+  margin: 3% 0 10%;
+}
+@media screen and (min-width: 840px) {
+  .skillList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 840px) {
+  .skillList::after {
+    content: "";
+    display: block;
+    width: calc((100% - 40px) / 3);
+  }
+}
+.skillList__item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1.3rem 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.45);
+}
+@media screen and (min-width: 840px) {
+  .skillList__item {
+    width: 32%;
+    margin-bottom: 2rem;
+  }
+}
+.skillList__item--head {
+  display: flex;
+  align-items: center;
+}
+.skillList__item--head figure img {
+  width: 80px;
+  height: 80px;
+}
+.skillList__item--type {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #333;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  font-size: 12px; /*IE9以前に対応する*/
+  font-size: 0.75rem;
+}
+.skillList__item--name {
+  margin: 10px 0 7px;
+  font-size: 20px; /*IE9以前に対応する*/
+  font-size: 1.25rem;
 }
 
 .footer {

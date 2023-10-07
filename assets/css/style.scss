@@ -9,6 +9,10 @@
     color: $colorMain;
 }
 
+body {
+}
+
+
 a.underline {
     position: relative;
 
@@ -138,7 +142,8 @@ img {
 
     &:before,
     &:after {
-        content: '★★★★★';
+        // content: '★★★★★';
+        content: '★★★';
     }
 
     &:after {
@@ -148,7 +153,7 @@ img {
         left: 0;
         overflow: hidden;
         white-space: nowrap;
-        color: #ffcf32; /* イエローカラー 自由に設定化 */
+        color: #ffc532; /* イエローカラー 自由に設定化 */
     }
 }
 .star5_rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
@@ -299,6 +304,7 @@ img {
 
 main {
     padding: $heightHeaderSp + 10px 0;
+    background-color: $color-bg;
     @include pc {
         padding: $heightHeaderPc + 50px 0;
     }
@@ -314,8 +320,14 @@ main {
     height: calc(100vh);
     display: grid;
     place-items: center;
+    background-color: $color-bg;
     @include pc {
         height: calc(100vh);
+    }
+
+    & h1 {
+        @include rem(36);
+        margin-bottom: 20px;
     }
 }
 
@@ -326,9 +338,6 @@ main {
         padding-bottom: 0px;
     }
 
-    & h1 {
-        @include rem(32);
-    }
 }
 
 /*スクロールダウン全体の場所*/
@@ -396,6 +405,7 @@ main {
     @include pc{
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     &__img {
@@ -408,7 +418,8 @@ main {
             width: 100%;
             max-width: 100%;
             @include pc {
-                width: 384px;
+                width: 256px;
+                height: 256px;
             }
         }
     }
@@ -465,6 +476,71 @@ main {
 
 
 // --------------------------------------------------
+// スキル
+// --------------------------------------------------
+.rating {
+    margin: 0 auto;
+    width: 57.5%;
+}
+
+.skillList {
+    margin: 3% 0 10%;
+
+    @include pc {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &::after {
+        @include pc {
+            content: '';
+            display: block;
+            width: calc((100% - 40px) / 3);
+        }
+    }
+    &__item {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        padding: 1.3rem 1rem;
+        background-color: $color-white;
+        border-radius: 0.5rem;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.45);
+        @include pc {
+            width: 32%;
+            margin-bottom: 2rem;
+        }
+
+        &--head {
+            display: flex;
+            align-items: center;
+            
+            & figure img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        &--type {
+            display: inline-block;
+            padding: 2px 6px;
+            background: $colorMain;
+            color: $color-white;
+            font-weight: 700;
+            border-radius: 0.75rem;
+            @include rem(12);
+        }
+
+        &--name {
+            margin: 10px 0 7px;
+            @include rem(20);
+        }
+    }
+}
+
+
+// --------------------------------------------------
 // フッター
 // --------------------------------------------------
 .footer {
@@ -484,7 +560,6 @@ main {
     height: 75px;
     top: 0%;
     left: 50%;
-    // z-index: -1;
     transform: translate(-50%, -50%);
     border-radius: 50% 50% 0 0;
 }

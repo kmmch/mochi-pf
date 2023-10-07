@@ -42,7 +42,11 @@
 
     <div class="fv">
         <div class="container">
-            <h1 class="TextTyping_ TextTypeFirst_">Welcome！<br>MOCHI's Portfolio！</h1>
+            <h1 class="TextTyping_ TextTypeFirst_">Welcome！<br class="is-sp">MOCHI's Portfolio！</h1>
+            <p>
+                エンジニアもちのポートフォリオへようこそ！<br class="is-sp">
+                プロフィールやこれまでの実績をご紹介します。
+            </p>
             <div class="scrollDown"><span>Scroll</span></div>
         </div>
     </div>
@@ -89,7 +93,7 @@
                             </ul>
                             <p class="profile__summary">
                                 Webエンジニア。<br>
-                                学生時代は自然言語処理が専攻。<br>卒業後は国内IT企業でCMSを使ったWebサイト構築やアクセス分析の業務に従事。<br>
+                                学生時代は自然言語処理が専攻。<br>卒業後は日系のIT企業でCMSを使ったWebサイト構築やアクセス分析の業務に従事。<br>
                                 社外ではWebサイト制作やITスキルのメンターとしても活動中。<br>
                                 趣味は野球観戦とバドミントン。
                             </p>
@@ -101,17 +105,353 @@
         </section>
 
 
+        <section id="blog" class="section">
+            <div class="wrapper">
+                <h2 class="section__ttl">BLOG</h2>
+                <p class="section__description">（不定期ですが）技術的なことを発信しています。</p>
+                <div class="section__container">
+                    <ul class="blogList">
+                        <li class="blogList__item">
+                            <a href="#">
+                                <p class="blogList__item--update"><time>2023/9/1</time></p>
+                                <p class="blogList__item--ttl">ここにブログのタイトルが入ります。</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section id="skill" class="section">
             <div class="wrapper">
                 <h2 class="section__ttl">SKILL</h2>
                 <p class="section__description">使える技術や製品</p>
                 <div class="section__container">
-                    <p><span class="star5_rating" data-rate="0"></span> 星0</p>
-                    <p><span class="star5_rating" data-rate="1"></span> 星1</p>
-                    <p><span class="star5_rating" data-rate="2"></span> 星2</p>
-                    <p><span class="star5_rating" data-rate="3"></span> 星3</p>
-                    <p><span class="star5_rating" data-rate="4"></span> 星4</p>
-                    <p><span class="star5_rating" data-rate="5"></span> 星5</p>
+                    <div class="rating">
+                        <p><span class="star5_rating" data-rate="2"></span>　使ったことがある。</p>
+                        <p><span class="star5_rating" data-rate="3"></span>　サポートを受けながら使用できる。</p>
+                        <p><span class="star5_rating" data-rate="5"></span>　独力で使いこなすことができる。</p>    
+                    </div>
+                    <ul class="skillList">
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/html5.png" alt="HTML5">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Language</p>
+                                <h3 class="skillList__item--name">HTML</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/css3.png" alt="CSS">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Language</p>
+                                <h3 class="skillList__item--name">CSS</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/sass.png" alt="Sass">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Language</p>
+                                <h3 class="skillList__item--name">Sass</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/javascript.png" alt="Javascript">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Language</p>
+                                <h3 class="skillList__item--name">Javascript</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/jquery.png" alt="jquery">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Framework</p>
+                                <h3 class="skillList__item--name">jQuery</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+
+                        <!-- <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="React">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Framework</p>
+                                <h3 class="skillList__item--name">React</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="3"></span></p>    
+                            </div>
+                        </li> -->
+
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/php.png" alt="PHP">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Language</p>
+                                <h3 class="skillList__item--name">PHP</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/symfony.png" alt="Symfony">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Framework</p>
+                                <h3 class="skillList__item--name">Symfony</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+
+                        <!-- <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="Python">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Launguage</p>
+                                <h3 class="skillList__item--name">Python</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="Tensorflow">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Library</p>
+                                <h3 class="skillList__item--name">Tensorflow</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="3"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="Keras">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Library</p>
+                                <h3 class="skillList__item--name">Keras</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="3"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="Java">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Launguage</p>
+                                <h3 class="skillList__item--name">Java</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li> -->
+
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/drupal.png" alt="Drupal">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">CMS</p>
+                                <h3 class="skillList__item--name">Drupal</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/wordpress.png" alt="Wordpress">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">CMS</p>
+                                <h3 class="skillList__item--name">Wordpress</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/apache.png" alt="Apache">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Web Server</p>
+                                <h3 class="skillList__item--name">Apache</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="3"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/mysql.png" alt="MySQL">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Database</p>
+                                <h3 class="skillList__item--name">MySQL</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/git.png" alt="git">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Software</p>
+                                <h3 class="skillList__item--name">git</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/github.png" alt="GitHub">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Service</p>
+                                <h3 class="skillList__item--name">GitHub</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/linux.png" alt="Linux">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">OS</p>
+                                <h3 class="skillList__item--name">Linux</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/vscode.png" alt="VS Code">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Editor</p>
+                                <h3 class="skillList__item--name">VS Code</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/ga.png" alt="Google Analytics">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Service</p>
+                                <h3 class="skillList__item--name">Google Analytics</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/gtm.svg" alt="Google Tag Manager">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Service</p>
+                                <h3 class="skillList__item--name">Google Tag Manager</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+
+                        <!-- <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="Eclipse">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">IDE</p>
+                                <h3 class="skillList__item--name">Eclipse</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="NO IMAGE">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Launguage</p>
+                                <h3 class="skillList__item--name">NO IMAGE</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="NO IMAGE">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Launguage</p>
+                                <h3 class="skillList__item--name">NO IMAGE</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li>
+                        <li class="skillList__item">
+                            <div class="skillList__item--head">
+                                <figure>
+                                    <img src="./assets/images/noimage.png" alt="NO IMAGE">
+                                </figure>
+                            </div>
+                            <div class="skillList__item--body">
+                                <p class="skillList__item--type">Launguage</p>
+                                <h3 class="skillList__item--name">NO IMAGE</h3>
+                                <p class="skillList__item--rating"><span class="star5_rating" data-rate="5"></span></p>    
+                            </div>
+                        </li> -->
+
+                    </ul>   
                 </div>
             </div>
         </section>
