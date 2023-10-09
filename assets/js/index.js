@@ -104,4 +104,37 @@
     });
 
 
+    // スキルリストの一部を表示する
+    var skills = $('#skillList').children();
+    $.each(skills, function(index, skill){
+        if(index > 8) {
+            $(skill).hide();
+        }
+    });
+    $('#skill .close').hide();
+
+
+    $('#skill .open').click(function(event) {
+        var skills = $('#skillList').children();
+        $.each(skills, function(index, skill){
+            if($(skill).css('display') != 'block') {
+                $(skill).show();
+            }
+        });
+        $('#skill .open').hide();
+        $('#skill .close').show();
+        event.preventDefault();
+    });
+
+    $('#skill .close').click(function(event) {
+        var skills = $('#skillList').children();
+        $.each(skills, function(index, skill){
+            if(index > 8) {
+                $(skill).hide();
+            }
+        });
+        $('#skill .open').show();
+        $('#skill .close').hide();
+        event.preventDefault();
+    });
 }(jQuery));

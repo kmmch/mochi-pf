@@ -1,7 +1,15 @@
 @charset "UTF-8";
 * {
+  font-size: 14px; /*IE9以前に対応する*/
+  font-size: 0.875rem;
   font-family: "Noto Sans JP", sans-serif;
   color: #333;
+}
+@media screen and (min-width: 840px) {
+  * {
+    font-size: 16px; /*IE9以前に対応する*/
+    font-size: 1rem;
+  }
 }
 
 a.underline {
@@ -22,25 +30,25 @@ a.underline:hover:after {
 }
 
 a {
-  font-size: 16px; /*IE9以前に対応する*/
-  font-size: 1rem;
+  font-size: 14px; /*IE9以前に対応する*/
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 840px) {
   a {
-    font-size: 20px; /*IE9以前に対応する*/
-    font-size: 1.25rem;
+    font-size: 16px; /*IE9以前に対応する*/
+    font-size: 1rem;
   }
 }
 
 p {
   line-height: 2;
-  font-size: 16px; /*IE9以前に対応する*/
-  font-size: 1rem;
+  font-size: 14px; /*IE9以前に対応する*/
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 840px) {
   p {
-    font-size: 20px; /*IE9以前に対応する*/
-    font-size: 1.25rem;
+    font-size: 16px; /*IE9以前に対応する*/
+    font-size: 1rem;
   }
 }
 
@@ -194,6 +202,74 @@ img {
 .star5_rating[data-rate="0"]:after {
   width: 0%;
 } /* 星0 */
+.btn {
+  display: block;
+  margin: 3% auto;
+  text-decoration: none;
+}
+@media screen and (min-width: 840px) {
+  .btn {
+    width: 30%;
+  }
+}
+.btn::before {
+  content: "";
+}
+.btn:hover {
+  color: #fff;
+}
+.btn__color-change-left {
+  text-align: center;
+  vertical-align: middle;
+  padding: 1rem 4rem;
+  font-weight: bold;
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn__color-change-left::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.btn__color-change-left:hover::before {
+  transform: translateX(0);
+}
+.btn__arrow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 4rem 1rem 3rem;
+  font-weight: bold;
+  background: #333;
+  color: #fff;
+  border-radius: 100vh;
+  position: relative;
+  transition: 0.5s;
+}
+.btn__arrow::before {
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.btn__arrow:hover {
+  background: #333;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -413,17 +489,16 @@ main {
 }
 @media screen and (min-width: 840px) {
   .profile__img {
-    margin-right: 7%;
+    width: 40%;
   }
 }
 .profile__img > img {
   width: 100%;
-  max-width: 100%;
+  max-width: 50%;
 }
 @media screen and (min-width: 840px) {
   .profile__img > img {
-    width: 256px;
-    height: 256px;
+    width: 50%;
   }
 }
 .profile__text {
@@ -432,7 +507,7 @@ main {
 @media screen and (min-width: 840px) {
   .profile__text {
     margin-top: 0px;
-    width: 50%;
+    width: 60%;
   }
 }
 .profile__name {
@@ -547,7 +622,7 @@ main {
 }
 
 .skillList {
-  margin: 3% 0 10%;
+  margin: 3% 0;
 }
 @media screen and (min-width: 840px) {
   .skillList {
@@ -638,29 +713,9 @@ main {
   display: none;
 }
 
-/*全て共通：モーダルのボタンの色を変更したい場合*/
-.modaal-close:after,
-.modaal-close:before {
-  background: #ccc;
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before {
-  background: #666;
-}
-
-/*確認を促すモーダル：タイトルの色を変更したい場合*/
-#modaal-title {
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-
-/*動画表示のモーダル：余白を変更したい場合*/
-.modaal-video .modaal-inner-wrapper {
-  padding: 0;
+.modaal-content h2 {
+  font-size: 18px; /*IE9以前に対応する*/
+  font-size: 1.125rem;
 }
 
 .footer {

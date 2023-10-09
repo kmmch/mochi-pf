@@ -5,11 +5,13 @@
 // 共通
 // --------------------------------------------------
 * {
+    @include rem(14);
     font-family: 'Noto Sans JP', sans-serif;
     color: $colorMain;
-}
 
-body {
+    @include pc {
+        @include rem(16);
+    }
 }
 
 
@@ -33,17 +35,17 @@ a.underline {
 }
 
 a {
-    @include rem(16);
+    @include rem(14);
     @include pc {
-        @include rem(20);
+        @include rem(16);
     }
 }
 
 p {
     line-height: 2;
-    @include rem(16);
+    @include rem(14);
     @include pc {
-        @include rem(20);
+        @include rem(16);
     }
 }
 
@@ -168,7 +170,84 @@ img {
 .star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
 .star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
 
+.btn {
+    display: block;
+    margin: 3% auto;
+    text-decoration: none;
 
+    @include pc {
+        width: 30%;
+    }
+
+    &::before {
+        content: "";
+    }
+
+    &:hover {
+        color: #fff;
+    }
+
+    
+    &__color-change-left {
+        
+	    text-align: center;
+	    vertical-align: middle;
+	    padding: 1rem 4rem;
+	    font-weight: bold;
+	    border: 2px solid $colorMain;
+        border-radius: 5px;
+	    color: $colorMain;
+	    cursor: pointer;
+	    position: relative;
+ 	    overflow: hidden;
+ 	    z-index: 1;
+
+        &::before {
+	        position: absolute;
+	        left: 0;
+	        top: 0;
+	        width: 100%;
+	        height: 100%;
+	        background-color: $colorMain;
+	        transform: translateX(-100%);
+	        transition: all .3s;
+	        z-index: -1;
+        }
+
+        &:hover {
+            &::before {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        padding: 1rem 4rem 1rem 3rem;
+        font-weight: bold;
+        background: $colorMain;
+        color: #fff;
+        border-radius: 100vh;
+        position: relative;
+        transition: 0.5s;
+
+        &::before {
+            width: 7px;
+        	height: 7px;
+	        border-top: 2px solid #fff;
+	        border-right: 2px solid #fff;
+	        transform: rotate(45deg);
+        }
+
+        &:hover {
+            background: $colorMain;
+        }
+    }
+}
 
 // --------------------------------------------------
 // ヘッダー
@@ -411,15 +490,14 @@ main {
     &__img {
         text-align: center;
         @include pc {
-            margin-right: 7%;
+            width: 40%;
         }
 
         & > img {
             width: 100%;
-            max-width: 100%;
+            max-width: 50%;
             @include pc {
-                width: 256px;
-                height: 256px;
+                width: 50%;
             }
         }
     }
@@ -428,7 +506,7 @@ main {
         margin-top: 40px;
         @include pc {
             margin-top: 0px;
-            width: 50%;
+            width: 60%;
         }
     }
 
@@ -572,7 +650,7 @@ main {
 }
 
 .skillList {
-    margin: 3% 0 10%;
+    margin: 3% 0;
 
     @include pc {
         display: flex;
@@ -662,7 +740,6 @@ main {
         text-align: center;
         @include rem(16);
     }
-
 }
 
 /*全て共通：hideエリアをはじめは非表示*/
@@ -670,29 +747,12 @@ main {
 	display: none;
 }
 
-/*全て共通：モーダルのボタンの色を変更したい場合*/
-.modaal-close:after, 
-.modaal-close:before{
-	background:#ccc;	
-}
+.modaal-content {
+    // height: 85vh;
 
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before{
-	background:#666;
-}
-
-/*確認を促すモーダル：タイトルの色を変更したい場合*/
-#modaal-title{
-	font-size:1.2rem;
-	text-align: center;
-	margin: 0 0 20px 0;
-}
-
-/*動画表示のモーダル：余白を変更したい場合*/
-.modaal-video .modaal-inner-wrapper{
-	padding:0;
+    & h2 {
+        @include rem(18);
+    }
 }
 
 
