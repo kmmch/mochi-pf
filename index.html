@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;800&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./node_modules/destyle.css/destyle.css">
+    <link rel="stylesheet" href="./node_modules/modaal/dist/css/modaal.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/299dae0a91.js" crossorigin="anonymous"></script>
 </head>
@@ -511,7 +512,46 @@
                 <h2 class="section__ttl">WORKS</h2>
                 <p class="section__description">過去の実績や作品をご紹介します。</p>
                 <div class="section__container">
-                    
+                    <ul class="workList">
+                        <li class="workList__item">
+                            <a href="#work-1" class="work">
+                                <figure class="work__thumb">
+                                    <img src="./assets/images/512x512.png" alt="work">
+                                </figure>
+                                <p class="work__ttl">ここにタイトルが入ります。</p>
+                            </a>
+                        </li>
+                        <section id="work-1" class="hide-area"><!--表示エリアのHTML。id名にリンク先と同じ名前を指定。非表示にするためhide-areaというクラス名も指定。-->
+                            <h2>お知らせ</h2>
+                            <p> おしらせの内容が入ります。</p>
+                        </section>
+
+                        <li class="workList__item">
+                            <a href="#work-2" class="work">
+                                <figure class="work__thumb">
+                                    <img src="./assets/images/512x512.png" alt="work">
+                                </figure>
+                                <p class="work__ttl">ここにタイトルが入ります。その2</p>
+                            </a>
+                        </li>
+                        <section id="work-2" class="hide-area"><!--表示エリアのHTML。id名にリンク先と同じ名前を指定。非表示にするためhide-areaというクラス名も指定。-->
+                            <h2>お知らせ</h2>
+                            <p> おしらせの内容が入ります。</p>
+                        </section>
+
+                        <li class="workList__item">
+                            <a href="#work-3" class="work">
+                                <figure class="work__thumb">
+                                    <img src="./assets/images/512x512.png" alt="work">
+                                </figure>
+                                <p class="work__ttl">ここにタイトルが入ります。その3</p>
+                            </a>
+                        </li>
+                        <section id="work-3" class="hide-area"><!--表示エリアのHTML。id名にリンク先と同じ名前を指定。非表示にするためhide-areaというクラス名も指定。-->
+                            <h2>お知らせ</h2>
+                            <p> おしらせの内容が入ります。</p>
+                        </section>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -525,6 +565,7 @@
         <p class="copyright">©︎ 2023 mochi-code</p>
     </footer>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/modaal/dist/js/modaal.min.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>

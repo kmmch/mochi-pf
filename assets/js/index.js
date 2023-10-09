@@ -81,4 +81,27 @@
     });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 
+
+    // モーダルウィンドウ
+    //1. テキストを含む一般的なモーダル
+    $(".work").modaal({
+	    overlay_close:true,//モーダル背景クリック時に閉じるか
+	    before_open:function(){// モーダルが開く前に行う動作
+		    $('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
+	    },
+	    after_close:function(){// モーダルが閉じた後に行う動作
+		    $('html').css('overflow-y','scroll');/*縦スクロールバーを出す*/
+	    }
+    });
+    $(".info").modaal({
+	    overlay_close:true,//モーダル背景クリック時に閉じるか
+	    before_open:function(){// モーダルが開く前に行う動作
+		    $('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
+	    },
+	    after_close:function(){// モーダルが閉じた後に行う動作
+		    $('html').css('overflow-y','scroll');/*縦スクロールバーを出す*/
+	    }
+    });
+
+
 }(jQuery));
