@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "jquery": "^3.7.0",
-    "modaal": "^0.4.4"
+    "modaal": "^0.4.4",
+    "slick": "^1.12.2"
   }
 }
