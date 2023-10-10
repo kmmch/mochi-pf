@@ -305,6 +305,9 @@ img {
   align-items: center;
   height: 100%;
 }
+.headerMenu__list--item {
+  font-weight: bold;
+}
 
 .hamburgerMenu {
   /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
