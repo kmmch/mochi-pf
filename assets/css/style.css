@@ -484,26 +484,26 @@ main {
 @media screen and (min-width: 840px) {
   .profile {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 }
 .profile__img {
   text-align: center;
+  width: clamp(64px, 30vw, 266px);
+  height: clamp(64px, 30vw, 266px);
+  margin: 0 auto;
 }
 @media screen and (min-width: 840px) {
   .profile__img {
-    width: 40%;
+    width: 30%;
+    margin: 0;
   }
 }
 .profile__img > img {
-  width: 100%;
-  max-width: 50%;
-}
-@media screen and (min-width: 840px) {
-  .profile__img > img {
-    width: 50%;
-  }
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .profile__text {
   margin-top: 40px;
@@ -511,7 +511,7 @@ main {
 @media screen and (min-width: 840px) {
   .profile__text {
     margin-top: 0px;
-    width: 60%;
+    width: 63%;
   }
 }
 .profile__name {

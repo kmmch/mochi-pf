@@ -485,21 +485,24 @@ main {
 .profile {
     @include pc{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
 
     &__img {
         text-align: center;
+        width: clamp(64px, 30vw, 266px);
+        height: clamp(64px, 30vw, 266px);
+        margin: 0 auto;
         @include pc {
-            width: 40%;
+            width: 30%;
+            margin: 0;
         }
 
         & > img {
-            width: 100%;
-            max-width: 50%;
+            border-radius: 50%;
+            object-fit: cover;
             @include pc {
-                width: 50%;
             }
         }
     }
@@ -508,7 +511,7 @@ main {
         margin-top: 40px;
         @include pc {
             margin-top: 0px;
-            width: 60%;
+            width: 63%;
         }
     }
 
