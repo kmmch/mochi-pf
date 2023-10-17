@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "destyle.css": "^4.0.0",
-    "jquery": "^3.7.1",
-    "modaal": "^0.4.4",
-    "slick-carousel": "^1.8.1"
-  }
-}
